@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Top 10</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/css.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	</head>
+	<body id="top">
+	   
+		<header>
+		    <h1 class="center">TOP 10 Juegos</h1>
+    		<nav>
+		        <ul class="center">
+		            <li>Inicio</li>
+		            <li class="submenu">
+		              Juegos
+		              <ul>
+		                  <li><a href="#overwatch">Overwatch</a></li>
+		                  <li><a href="#wow">World of Warcraft</a></li>
+		                  <li><a href="#lol">League of Legends</a></li>
+		                  <li><a href="#cs">Counter Strike</a></li>
+		                  <li><a href="#warframe">Warframe</a></li>
+		                  <li><a href="#civilization">Civilization VI</a></li>
+		                  <li><a href="#minecraft">Minecraft</a></li>
+		                  <li><a href="#farming">Farming Simulator 17</a></li>
+		              </ul>
+		            </li>
+		        </ul>
+		    </nav>
+		</header>
+		<section class="center">
+		<h2>Top 10</h2>
+		<article id="overwatch" class="articulo">
+           <h4>OverWatch</h4>
+           <p class="parrafo">Overwatch es un videojuego de tipo shooter en primera persona desarrollado por Blizzard Entertainment.</p>    
+           <iframe width="1280" height="720" src="https://www.youtube.com/embed/Eu7_o0g4n3U" frameborder="0" allowfullscreen></iframe>       
+        </article>
+        <article id="wow" class="articulo">
+            <h4>World Of Warcraft</h4>
+            <p class="parrafo">World of Warcraft es un videojuego de rol multijugador masivo en línea desarrollado por Blizzard Entertainment</p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/9dtElNTvlN4" frameborder="0" allowfullscreen></iframe>
+        </article>
+        <article id="lol" class="articulo">
+            <h4>League Of Legends</h4>
+            <p class="parrafo">League of Legends (también conocido por sus siglas LoL) es un videojuego de género multiplayer online battle arena (MOBA) desarrollado por Riot Games para Microsoft Windows y OS X</p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/IzMnCv_lPxI" frameborder="0" allowfullscreen></iframe>
+        </article>
+        <article id="cs" class="articulo">
+            <h4>Counter Strike</h4>
+            <p class="parrafo">Counter-Strike: Global Offensive (CS:GO) es un Videojuego de disparos en primera persona desarrollado por Valve Corporation en cooperación con Hidden Path Entertainment, y es el cuarto juego de la saga Counter-Strike, sin contar Counter-Strike: Online.</p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/edYCtaNueQY" frameborder="0" allowfullscreen></iframe>
+        </article>
+        <article id="warframe" class="articulo">
+            <h4>Warframe</h4>
+            <p class="parrafo">Warframe es un videojuego de disparos en tercera persona gratuito que está siendo desarrollado por la compañía Digital Extremes para Microsoft Windows, PlayStation 4 y Xbox One. Permite jugar en modo multijugador hasta un máximo de cuatro jugadores (Y hasta 8 Jugadores en una misión especial).</p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/Q6cIRZlMQ3g" frameborder="0" allowfullscreen></iframe>
+            
+        </article>
+        <article id="civilization" class="articulo">
+            <h4>Civilization vi</h4>
+            <p class="parrafo">Civilization VI ofrece nuevas maneras de interactuar con tu mundo, expandir tu imperio a través del mapa, fomentar el progreso de tu cultura y competir contra los líderes más importantes de la historia para crear una civilización que resista el paso del tiempo.</p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/qvBf6WBatk0" frameborder="0" allowfullscreen></iframe>
+        </article>
+        <article id="minecraft" class="articulo">
+            <h4>Minecraft</h4>
+            <p class="parrafo">Minecraft es un juego sobre la colocación de bloques e ir de aventuras. Explora mundos generados al azar y construye cosas increíbles, desde lo más simple de una casa al más grande de los castillos. Juega en el modo creativo con recursos ilimitados o profundiza en mina en el modo de supervivencia,crea armas y armaduras para defenderte de los monstruos peligrosos. Haz todo esto solo o con amigos.
+</p>
+       <iframe width="1280" height="720" src="https://www.youtube.com/embed/FaMTedT6P0I" frameborder="0" allowfullscreen></iframe>
+        </article>
+        <article id="farming" class="articulo">
+            <h4>Farming Simulator 17</h4>
+            <p class="parrafo">¡Conviértete en un granjero moderno en Farming Simulator 17! Sumérgete en un mundo abierto con una enorme cosecha de novedades: ¡nuevo escenario, vehículos, animales, cultivos y mecánicas de juego!</p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/HYlgloZcWxc" frameborder="0" allowfullscreen></iframe>
+        </article>
+                        
+        </section>
+        
+        <aside></aside>
+        <a id="goTop" href="#top">
+        <div class="subir"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></div>
+        
+        </a>
+        
+        
+        
+        
+	<script type="text/javascript">
+	    $(document).on('click', '.submenu a, a#goTop ', function(event){
+	        event.preventDefault();
+	        var elementID = $.attr(this, 'href');
+	        $('html, body').animate({
+	            scrollTop: $(elementID).offset().top
+	        }, 500);
+	    });
+        var windowWidth = $(window).width();
+        var documentWidth = $(document).width();
+        if(windowWidth > 1200){
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop() > 500){
+                        $('#goTop').fadeIn();
+                    } else {
+                        $('#goTop').fadeOut();
+                    }
+                });                 
+            });
+        }
+	</script>
+	</body>
+</html>
